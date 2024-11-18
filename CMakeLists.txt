@@ -14,9 +14,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 file(GLOB _SOURCES_ ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
 add_executable(main ${_SOURCES_})
 
-# Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(main pico_stdlib)
+target_include_directories(main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+target_link_libraries(main pico_stdlib tinyusb_device tinyusb_board)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(main)
-

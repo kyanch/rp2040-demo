@@ -1,5 +1,11 @@
 # RP2040 demo
 
+> [official example](https://github.com/raspberrypi/pico-examples)
+
+> [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)
+
+> [RPI Pico C/C++ SDK book](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf)
+
 ## Setup your compiler toolchain
 
 For Arch:
@@ -41,3 +47,11 @@ Or you want use Ninja:
 cmake -B build -G Ninja
 cmake --build build
 ```
+
+## Flash your pico2
+
+Press the button on your pico2 and connect the cable.
+
+find `*.uf2` file in `build` folder, and drag it into the folder created by pico2.
+
+That is it.
